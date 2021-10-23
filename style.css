@@ -1,0 +1,54 @@
+body {
+    margin:0;
+    background-color: cadetblue;
+}
+
+h1  {
+    margin-left: 100px;
+    margin-top: 20px
+}
+
+.main {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.genius {
+    display: grid;
+    grid-template-areas: 'verde amarelo'
+        'vermelho azul';
+    grid-gap: 10px;
+    background-color: black;
+    border-radius: 100%;
+    width: 600px;
+    height: 600px;
+}
+
+.verde{
+    grid-area: verde;
+    border-top-left-radius: 100%;
+    background-color: green;
+}
+
+.amarelo {
+    grid-area: amarelo;
+    border-top-right-radius: 100%;
+    background-color: yellow;
+}
+
+.vermelho{
+    grid-area: 'vermelho';
+    border-bottom-left-radius: 100%;
+    background-color: red;
+}
+
+.azul {
+    grid-area: azul;
+    border-bottom-right-radius: 100%;
+    background-color: blue;
+}
+
+.selected{
+    background-color: white;
+}
