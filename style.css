@@ -5,7 +5,7 @@ body {
 
 h1  {
     margin-left: 100px;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .main {
@@ -25,6 +25,10 @@ h1  {
     height: 600px;
 }
 
+.verde, .amarelo, .vermelho, .azul{
+    cursor: pointer;
+}
+
 .verde{
     grid-area: verde;
     border-top-left-radius: 100%;
@@ -38,7 +42,7 @@ h1  {
 }
 
 .vermelho{
-    grid-area: 'vermelho';
+    grid-area: vermelho;
     border-bottom-left-radius: 100%;
     background-color: red;
 }
