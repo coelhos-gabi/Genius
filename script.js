@@ -26,13 +26,16 @@ let shuffleOrder = () => {
 
 //acende a proxima cor
 let lightColor = (element, number) => {
-    number = number * 500;
+    const selectColorAt = number * 600 - 250
+    const deselectColorAt = (number * 600) - 100
+
+    number = number * 600;
     setTimeout(() => {
         element.classList.add('selected');
-    }, number - 250);
+    }, selectColorAt);
     setTimeout(() => {
         element.classList.remove('selected');
-    });
+    }, deselectColorAt);
 }
 
 //checa se os botoes clicados são os mesmos da ordem gerada no jogo
@@ -82,7 +85,7 @@ let nextLevel = () => {
 
 //funcao para game over
 let gameOver = () => {
-    alert(`Pontuação: ${score}!\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo`);
+    alert(`Pontuação: ${score - 1}!\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo`);
     order = [];
     clickedOrder = [];
 
@@ -91,7 +94,7 @@ let gameOver = () => {
 
 //funcao de inicio do jogo
 let playGame = () => {
-    alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
+    alert('Bem vindo ao Genius! Iniciando novo jogo!');
     score = 0;
     document.querySelector('h1').innerHTML = `Pontuação: ${score}`;
     nextLevel();
